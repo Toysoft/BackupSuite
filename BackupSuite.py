@@ -14,17 +14,17 @@ import partialbackup
 import compress
 import restore
 
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-print 'Argument List:', str(sys.argv)
+print ('Number of arguments:', len(sys.argv), 'arguments.')
+print ('Argument List:', str(sys.argv))
 
 if len(sys.argv) != 4:
-    print "Error in argument list"
-    print "Expected 4 args: $> BackupSuite.py exec_mode src_path dst_path"
-    
-    print "Argument 0> BackupSuite.py : this script"
-    print "Argument 1> exec_mode : execution mode (FullBackup; PartialBackup; Compress; Restore)"
-    print "Argument 2> src_path : Source folder to backup"
-    print "Argument 3> dst_path : Target for backup"
+    print ("Error in argument list")
+    print ("Expected 4 args: $> BackupSuite.py exec_mode src_path dst_path")
+          
+    print ("Argument 0> BackupSuite.py : this script")
+    print ("Argument 1> exec_mode : execution mode (FullBackup; PartialBackup; Compress; Restore)")
+    print ("Argument 2> src_path : Source folder to backup")
+    print ("Argument 3> dst_path : Target for backup")
     sys.exit(-1)
 
 src = sys.argv[2] + os.sep 

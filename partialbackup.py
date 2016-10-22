@@ -16,8 +16,8 @@ def md5(fname):
 def ProcessFile(src_start_path, dst_start_path, partial_path, filename):
     src_file = os.path.join(src_start_path, partial_path, filename)
     dst_file = os.path.join(dst_start_path, partial_path, filename)
-    print "SRC FILE: " + src_file
-    print "DST FILE: " + dst_file
+    print ("SRC FILE: " + src_file)
+    print ("DST FILE: " + dst_file)
 
     if not os.path.isfile(dst_file):
         shutil.copy2(src_file,dst_file)
@@ -37,8 +37,8 @@ def ProcessFile(src_start_path, dst_start_path, partial_path, filename):
 def ProcessFolder(src_start_path, dst_start_path, partial_path):
     src_folder = os.path.join(src_start_path, partial_path)
     dst_folder = os.path.join(dst_start_path, partial_path)
-    print "SRC FOLDER: " + src_folder
-    print "DST FOLDER: " + dst_folder
+    print ("SRC FOLDER: " + src_folder)
+    print ("DST FOLDER: " + dst_folder)
 
     if not os.path.exists(dst_folder):
         os.makedirs(dst_folder)
